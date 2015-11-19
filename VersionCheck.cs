@@ -42,7 +42,7 @@ namespace BorderlandsAdvancedConfig
 
 				// prepare the web page we will be asking for
 				HttpWebRequest request = (HttpWebRequest)
-					WebRequest.Create("http://www.nqaclan.com/Borderlands/CurrentVersion.txt");
+					WebRequest.Create("https://raw.githubusercontent.com/TheLonerD/BorderlandsAdvancedConfig/master/CurrentVersion.txt");
 
 				// execute the request
 				HttpWebResponse response = (HttpWebResponse)
@@ -72,7 +72,7 @@ namespace BorderlandsAdvancedConfig
 				while (count > 0); // any more data to read?
 
 				// print out page source
-				return sb.ToString();
+				return sb.ToString().Trim();
 			}
 			catch
 			{

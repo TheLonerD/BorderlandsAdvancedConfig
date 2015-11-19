@@ -23,7 +23,7 @@ namespace BorderlandsAdvancedConfig
 		private InputSettingsManager InputManager;
 		private GameSettingsManager GameManager;
 
-		private const string officialThreadURL = "http://www.nqaclan.com/phpBB3/viewtopic.php?f=65&t=2485";
+		private const string codeRepository = "https://github.com/TheLonerD/BorderlandsAdvancedConfig";
 
 		public string AssemblyVersion
 		{
@@ -421,7 +421,7 @@ namespace BorderlandsAdvancedConfig
 
 		private void lnkOfficialThread_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start(officialThreadURL);
+			System.Diagnostics.Process.Start(codeRepository);
 		}
 
 		private void btnAbout_Click(object sender, EventArgs e)
@@ -446,7 +446,7 @@ namespace BorderlandsAdvancedConfig
 
 		private void UpdateBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
-			VersionCheck versionCheck = new VersionCheck(officialThreadURL);
+			VersionCheck versionCheck = new VersionCheck(codeRepository);
 		}
 	}
 }
