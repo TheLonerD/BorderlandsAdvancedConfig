@@ -427,7 +427,7 @@ namespace BorderlandsAdvancedConfig
 		private void btnAbout_Click(object sender, EventArgs e)
 		{
 			AboutBox ab = new AboutBox();
-			ab.Show();
+			ab.ShowDialog(this);
 		}
 
 		private void chkVsync_CheckedChanged(object sender, EventArgs e)
