@@ -54,10 +54,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IPTextBox, Version=1.0.3603.33092, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ExternalLibraries\IPTextBox.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -87,12 +83,6 @@
     <Compile Include="ErrorHandling\ErrorMessageBox.Designer.cs">
       <DependentUpon>ErrorMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEnterIP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEnterIP.Designer.cs">
-      <DependentUpon>FrmEnterIP.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLoad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,7 +108,6 @@
       <DependentUpon>LocalizedStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="PathSettings.cs" />
-    <Compile Include="PortConfigs.cs" />
     <Compile Include="BaseTypes\PortForwardEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEnterIP.resx">
-      <DependentUpon>FrmEnterIP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoad.resx">
       <DependentUpon>FrmLoad.cs</DependentUpon>
@@ -161,15 +147,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="BaseTypes\Protocol.cs" />
-    <Compile Include="UPnp.cs" />
     <Compile Include="VersionCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Assets\Banner.png" />
-    <None Include="PortConfig.cfg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Assets\Glacier.jpg" />
     <None Include="Assets\Sig.png" />
     <Content Include="Assets\title_bar.png" />
@@ -207,16 +189,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="NATUPNPLib">
-      <Guid>{1C565858-F302-471E-B409-F180AA4ABEC6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
