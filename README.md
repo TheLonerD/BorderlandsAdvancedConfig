@@ -4,7 +4,6 @@ The objective of this program is to allow easy configuration of Borderlands opti
 
 ### Features
 * Tweak game settings outside the game;
-* UPnP port forward setup script with error handling;
 * Backup/restore;
 * Custom INI parser with error handling.
 
