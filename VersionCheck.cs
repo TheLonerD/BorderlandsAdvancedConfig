@@ -42,7 +42,7 @@ namespace BorderlandsAdvancedConfig
 
                 // prepare the web page we will be asking for
                 HttpWebRequest request = (HttpWebRequest)
-                    WebRequest.Create("https://cdn.rawgit.com/TheLonerD/BorderlandsAdvancedConfig/master/CurrentVersion.txt");
+                    WebRequest.Create("https://raw.githubusercontent.com/TheLonerD/BorderlandsAdvancedConfig/master/CurrentVersion.txt");
 
                 // execute the request
                 HttpWebResponse response = (HttpWebResponse)
