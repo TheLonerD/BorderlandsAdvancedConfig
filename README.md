@@ -1,10 +1,12 @@
 # Borderlands Advanced Settings
 
-### Features:
+Tweak game settings outside the game.
 
-* Tweak game settings outside the game
-* Backup/restore
-* Custom INI parser with error handling
+### Requirements
+* Windows XP or above;
+* .NET Framework 4 ([Web](https://www.microsoft.com/en-us/download/details.aspx?id=17851) | [Standalone](https://www.microsoft.com/en-us/download/details.aspx?id=17718) Installer);
+* Borderlands Installation;
+* **You must run the game at least once.**
 
 ### Toggle engine features:
 * Ambient Occlusion
@@ -23,3 +25,5 @@
 * Remove outlines
 * Show/hide HUD
 * Show/hide FPS
+
+You can report bugs [here](https://github.com/TheLonerD/BorderlandsAdvancedConfig/issues). I'll try to fix them.
