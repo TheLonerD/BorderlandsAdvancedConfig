@@ -26,7 +26,7 @@ namespace BorderlandsAdvancedConfig.INIParser
         /// <param name="iniPath">Full path to INI file.</param>
         public INIFileParser(String iniPath)
         {
-			configSections = new Dictionary<string, ConfigSection>();
+            configSections = new Dictionary<string, ConfigSection>();
 
             TextReader iniFile = null;
             string strLine = null;
@@ -147,16 +147,16 @@ namespace BorderlandsAdvancedConfig.INIParser
             }
         }
 
-		public void CopyReplaceSection(String sourceSection, String destSectionName)
-		{
-			ConfigSection clone = new ConfigSection(configSections[sourceSection]);
+        public void CopyReplaceSection(String sourceSection, String destSectionName)
+        {
+            ConfigSection clone = new ConfigSection(configSections[sourceSection]);
 
-			clone.OrderInFile = configSections[destSectionName].OrderInFile;
-			clone.SectionName = configSections[destSectionName].SectionName;
+            clone.OrderInFile = configSections[destSectionName].OrderInFile;
+            clone.SectionName = configSections[destSectionName].SectionName;
 
-			configSections.Remove(destSectionName);
-			configSections.Add(destSectionName, clone);
-		}
+            configSections.Remove(destSectionName);
+            configSections.Add(destSectionName, clone);
+        }
 
         public void SetSetting(String sectionName, String settingName, int settingOrder, string value)
         {
@@ -208,27 +208,27 @@ namespace BorderlandsAdvancedConfig.INIParser
             if (section == null)
             {
                 section = new ConfigSection(sectionName, configSections.Count);
-				configSections.Add(sectionName, section);
+                configSections.Add(sectionName, section);
             }
 
             section.AddEntry(settingName, settingValue, commentString);
         }
 
-		internal void AddSettings(String sectionName, IList<ConfigEntry> Entries)
-		{
-			ConfigSection section = configSections[sectionName];
+        internal void AddSettings(String sectionName, IList<ConfigEntry> Entries)
+        {
+            ConfigSection section = configSections[sectionName];
 
-			if (section == null)
-			{
-				section = new ConfigSection(sectionName, configSections.Count);
-				configSections.Add(sectionName, section);
-			}
+            if (section == null)
+            {
+                section = new ConfigSection(sectionName, configSections.Count);
+                configSections.Add(sectionName, section);
+            }
 
-			foreach (ConfigEntry entry in Entries)
-			{
-				section.AddEntry((ConfigEntry) entry.Clone());
-			}
-		}
+            foreach (ConfigEntry entry in Entries)
+            {
+                section.AddEntry((ConfigEntry)entry.Clone());
+            }
+        }
 
         /// <summary>
         /// Remove a setting.
@@ -276,9 +276,9 @@ namespace BorderlandsAdvancedConfig.INIParser
             String tmpValue = "";
             String strToSave = "";
 
-			IList<ConfigSection> ConfigSectionsList = new List<ConfigSection>(configSections.Values.OrderBy(x=>x.OrderInFile));
+            IList<ConfigSection> ConfigSectionsList = new List<ConfigSection>(configSections.Values.OrderBy(x => x.OrderInFile));
 
-			foreach (ConfigSection section in ConfigSectionsList)
+            foreach (ConfigSection section in ConfigSectionsList)
             {
                 strToSave += ("[" + section.SectionName + "]\r\n");
 
@@ -324,8 +324,8 @@ namespace BorderlandsAdvancedConfig.INIParser
         {
             foreach (KeyValuePair<string, ConfigSection> section in configSections)
             {
-				Debug.WriteLine(section.Value.SectionName + " " + section.Value.OrderInFile);
+                Debug.WriteLine(section.Value.SectionName + " " + section.Value.OrderInFile);
             }
         }
-	}
+    }
 }

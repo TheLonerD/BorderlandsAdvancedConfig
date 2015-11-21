@@ -6,30 +6,30 @@ using BorderlandsAdvancedConfig.INIParser;
 
 namespace BorderlandsAdvancedConfig.SettingsManagers
 {
-	public class GameSettingsManager
-	{
-		private INIFileParser GameParser;
+    public class GameSettingsManager
+    {
+        private INIFileParser GameParser;
 
-		public GameSettingsManager(INIFileParser gameParser)
+        public GameSettingsManager(INIFileParser gameParser)
         {
-			this.GameParser = gameParser;
+            this.GameParser = gameParser;
         }
 
-		internal int PlayerInfoMaxDist
-		{
-			get
-			{
-				return int.Parse(GameParser.GetSetting("WillowGame.WillowHUD", "PlayerInfoMaxDist", 0).value);
-			}
-			set
-			{
-				GameParser.SetSetting("WillowGame.WillowHUD", "PlayerInfoMaxDist", 0, value.ToString());
-			}
-		}
+        internal int PlayerInfoMaxDist
+        {
+            get
+            {
+                return int.Parse(GameParser.GetSetting("WillowGame.WillowHUD", "PlayerInfoMaxDist", 0).value);
+            }
+            set
+            {
+                GameParser.SetSetting("WillowGame.WillowHUD", "PlayerInfoMaxDist", 0, value.ToString());
+            }
+        }
 
-		internal void Save()
-		{
-			GameParser.SaveSettings();
-		}
-	}
+        internal void Save()
+        {
+            GameParser.SaveSettings();
+        }
+    }
 }

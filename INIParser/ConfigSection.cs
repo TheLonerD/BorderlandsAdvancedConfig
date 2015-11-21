@@ -18,12 +18,12 @@ namespace BorderlandsAdvancedConfig.INIParser
 
         public List<ConfigEntry> Entries;
 
-		public ConfigSection(ConfigSection configSection)
-		{
-			SectionName = configSection.SectionName;
-			OrderInFile = configSection.OrderInFile;
-			Entries = new List<ConfigEntry>(configSection.Entries);
-		}
+        public ConfigSection(ConfigSection configSection)
+        {
+            SectionName = configSection.SectionName;
+            OrderInFile = configSection.OrderInFile;
+            Entries = new List<ConfigEntry>(configSection.Entries);
+        }
 
         public ConfigSection(string name, int orderInFile)
         {
@@ -35,22 +35,23 @@ namespace BorderlandsAdvancedConfig.INIParser
         public void AddEntry(string name, string value, string commentString)
         {
             ConfigEntry newEntry = new ConfigEntry(name, 0, value, commentString);
-            while (Entries.Contains(newEntry)) {
+            while (Entries.Contains(newEntry))
+            {
                 newEntry.key.order++;
             }
 
             Entries.Add(newEntry);
         }
 
-		public void AddEntry(ConfigEntry entry)
-		{
-			Entries.Add(entry);
-		}
+        public void AddEntry(ConfigEntry entry)
+        {
+            Entries.Add(entry);
+        }
 
-		public void AddEntries(IList<ConfigEntry> entries)
-		{
-			Entries.AddRange(entries);
-		}
+        public void AddEntries(IList<ConfigEntry> entries)
+        {
+            Entries.AddRange(entries);
+        }
 
         public void RemoveEntry(string name, int order)
         {
@@ -105,5 +106,5 @@ namespace BorderlandsAdvancedConfig.INIParser
 
             return entry;
         }
-	}
+    }
 }

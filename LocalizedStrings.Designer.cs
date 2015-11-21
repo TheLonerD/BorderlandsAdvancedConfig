@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BorderlandsAdvancedConfig {
+namespace BorderlandsAdvancedConfig
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,92 +23,62 @@ namespace BorderlandsAdvancedConfig {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LocalizedStrings {
-        
+    internal class LocalizedStrings
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal LocalizedStrings() {
+        internal LocalizedStrings()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        internal static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BorderlandsAdvancedConfig.LocalizedStrings", typeof(LocalizedStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        internal static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your borderlands config file could not be found. They are usually located under:
         ///[UserName]\My Documents\My Games\Borderlands\WillowGame\Config\
         ///Manually browse to config directory?.
         /// </summary>
-        internal static string ConfigNotFound {
-            get {
+        internal static string ConfigNotFound
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfigNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to READ THIS! You trigger happy, Ok hitting user of all things.
-        ///I will now attempt to setup port forwarding for the game. The success depends on:
-        ///a) Your router MUST support U-PnP.
-        ///b) Your router supports U-PnP and it&apos;s ENABLED.
-        ///c) Your router doesn&apos;t suck. A lot of routers have lousy U-PnP support. (e.g. Linksys WRT54G and they sold a gazillion of those). Go blame the manufacturer!
-        ///d) You have cleared all manual port forwards in the router (port forward mappings and/or virtual server).
-        ///e) You are NOT ru [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string UPnpNotice {
-            get {
-                return ResourceManager.GetString("UPnpNotice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Could not obtain U-PnP mappings. Either no U-PnP devices were found or another program has a lock. Exit other programs and try again..
-        /// </summary>
-        internal static string UPnpNull {
-            get {
-                return ResourceManager.GetString("UPnpNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your detected lan ip of: {0} does not seem like a normal lan ip. This is usally caused when you have multiple network interfaces.
-        ///- Click Yes to continue.
-        ///- Click No to manually enter your Lan IP.
-        ///- Click Cancel to abort. 
-        ///
-        ///You can also disable all but the network card that connects to your router and try again.
-        ///
-        ///If you are still having issues after performing the above, drop us a line by clicking the feeback button..
-        /// </summary>
-        internal static string UPnpWierdLanIP {
-            get {
-                return ResourceManager.GetString("UPnpWierdLanIP", resourceCulture);
             }
         }
     }

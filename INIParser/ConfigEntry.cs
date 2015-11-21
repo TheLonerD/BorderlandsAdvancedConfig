@@ -23,7 +23,7 @@ namespace BorderlandsAdvancedConfig.INIParser
 
         public string commentString { get; set; }
 
-		public ConfigEntry() { }
+        public ConfigEntry() { }
 
         public ConfigEntry(string name, int order)
         {
@@ -65,16 +65,16 @@ namespace BorderlandsAdvancedConfig.INIParser
         #endregion
 
 
-		public object Clone()
-		{
-			ConfigEntry clone = new ConfigEntry();
-			clone.key.name = this.key.name;
-			clone.key.order = this.key.order;
+        public object Clone()
+        {
+            ConfigEntry clone = new ConfigEntry();
+            clone.key.name = this.key.name;
+            clone.key.order = this.key.order;
 
-			clone.value = this.value;
-			clone.commentString = this.commentString;
+            clone.value = this.value;
+            clone.commentString = this.commentString;
 
-			return clone;
-		}
-	}
+            return clone;
+        }
+    }
 }

@@ -108,7 +108,6 @@
       <DependentUpon>LocalizedStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="PathSettings.cs" />
-    <Compile Include="BaseTypes\PortForwardEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox.resx">
@@ -146,7 +145,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="BaseTypes\Protocol.cs" />
     <Compile Include="VersionCheck.cs" />
   </ItemGroup>
   <ItemGroup>
